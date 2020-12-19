@@ -185,7 +185,12 @@
     </div>
 
     <div class="content" v-pre>
-        <h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h1 id="准备事项"><a href="#准备事项" class="headerlink" title="准备事项"></a>准备事项</h1><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><ul>
+        <h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。</p>
+<p>Hexo 使用 <a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，</p>
+<p>即可利用靓丽的主题生成静态网页。</p>
+<a id="more"></a>
+
+<h1 id="准备事项"><a href="#准备事项" class="headerlink" title="准备事项"></a>准备事项</h1><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><ul>
 <li><p> <a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js下载地址</a></p>
 </li>
 <li><p>测试是否安装成功<code>node -v</code>显示版本号即成功</p>
@@ -207,10 +212,6 @@
 <li><p>npm的镜像源管理工具</p>
 </li>
 <li><p>通过<code>npm</code>下载<code>nrm</code></p>
-<pre><code class="bash">npm install -g nrm
-nrm ls        #查看可选的源
-nrm test taobao        #测试相应源的响应速度
-nrm use taobao        #切换到taobao源</code></pre>
 </li>
 </ul>
 </li>
@@ -219,11 +220,13 @@ nrm use taobao        #切换到taobao源</code></pre>
 </ul>
 </li>
 </ul>
+<pre><code class="bash">npm install -g nrm
+nrm ls        #查看可选的源
+nrm test taobao        #测试相应源的响应速度
+nrm use taobao        #切换到taobao源</code></pre>
 <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><ul>
-<li><p><a target="_blank" rel="noopener" href="https://git-scm.com/">Git下载地址</a></p>
-</li>
-<li><p>测试是否安装成功<code>git -v</code>显示版本号即成功</p>
-</li>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/">Git下载地址</a></li>
+<li>测试是否安装成功<code>git -v</code>显示版本号即成功</li>
 </ul>
 <h1 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h1><h2 id="安装Hexo框架"><a href="#安装Hexo框架" class="headerlink" title="安装Hexo框架"></a>安装Hexo框架</h2><h3 id="1-全局安装"><a href="#1-全局安装" class="headerlink" title="1. 全局安装"></a>1. 全局安装</h3><pre><code class="bash">npm install -g hexo-cli</code></pre>
 <h3 id="2-也可以进行局部安装"><a href="#2-也可以进行局部安装" class="headerlink" title="2. 也可以进行局部安装"></a>2. 也可以进行局部安装</h3><pre><code class="bash">npm install hexo    #局部安装</code></pre>
@@ -293,11 +296,11 @@ hexo server        #开启本地服务器</code></pre>
   type: &#39;git&#39;        #类型设置为 git
   repo: git@github.com:wnaoii/wnaoii.github.io.git        #指定 repo 地址为Github仓库地址
   branch: master</code></pre>
+<p><font color="red">注意冒号后有空格</font></p>
+<p><font color="red">注意冒号后有空格</font></p>
+<p><font color="red">注意冒号后有空格</font></p>
 </li>
 </ul>
-<p><font color="red">注意冒号后有空格</font></p>
-<p><font color="red">注意冒号后有空格</font></p>
-<p><font color="red">注意冒号后有空格</font></p>
 <h2 id="推送到GitHub"><a href="#推送到GitHub" class="headerlink" title="推送到GitHub"></a>推送到GitHub</h2><ul>
 <li><p>在存放博客的文件夹内打开命令行窗口依次输入</p>
 <pre><code class="bash">hexo clean</code></pre>
