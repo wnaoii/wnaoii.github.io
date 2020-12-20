@@ -1,0 +1,774 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WNAOII || 命令格式</title>
+    <meta name="author" content="WNAOII">
+    <meta name="description" content="无一分可增不叫完美，无一分可减才是 ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/https://s3.ax1x.com/2020/12/19/rtugc4.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/night-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">WNAOII</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>归档</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>WNAOII</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>命令格式 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/20
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/Linux">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                Linux
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Linux" style=color:#006674>
+                    Linux
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>linux命令是对Linux系统进行管理的命令。对于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Linux%E7%B3%BB%E7%BB%9F/1732935">Linux系统</a>来说，无论是中央处理器、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98/103614">内存</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E9%A9%B1%E5%8A%A8%E5%99%A8/5900722">磁盘驱动器</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%94%AE%E7%9B%98/208749">键盘</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%BC%A0%E6%A0%87/122323">鼠标</a>，还是用户等都是文件，Linux系统管理的命令是它正常运行的核心，与之前的DOS命令类似。</p>
+<a id="more"></a>
+
+<p>命令格式：</p>
+<pre><code class="bash">命令 [-选项] [参数]
+例： ls -la /etc</code></pre>
+<p>说明： </p>
+<ol>
+<li><p>个别命令使用不遵循此格式</p>
+</li>
+<li><p><font color='\#00FF00'>当有多个选项时，可以写在一起</font></p>
+</li>
+<li><p>可以写成简化选项与完整选项</p>
+<p>简化：</p>
+<pre><code class="bash">-a</code></pre>
+<p>完整：</p>
+<pre><code class="bash">--all</code></pre>
+</li>
+</ol>
+<h1 id="文件目录介绍"><a href="#文件目录介绍" class="headerlink" title="文件目录介绍"></a>文件目录介绍</h1><p>1.</p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNcpQO.png"></p>
+<ul>
+<li>引用计数，代表曾经被应用过</li>
+<li>展示不记不重要，仅了解</li>
+</ul>
+<p>2.</p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNcVYt.png"></p>
+<ul>
+<li>代表所有者</li>
+</ul>
+<p>3.</p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNcyfx.png"></p>
+<ul>
+<li>代表所属组</li>
+</ul>
+<p>4.</p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNcRXD.png"></p>
+<ul>
+<li>代表文件的大小</li>
+</ul>
+<p>5.</p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNcTht.png"></p>
+<ul>
+<li>代表文件最后的改动时间</li>
+</ul>
+<p>6.</p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rN2Sqe.png"></p>
+<ul>
+<li>代表文件名</li>
+</ul>
+<p>开头段释意：</p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNhwnK.png"></p>
+<ul>
+<li>第一位代表文件类型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">d</td>
+<td align="center">目录</td>
+</tr>
+<tr>
+<td align="center">l</td>
+<td align="center">软连接文件</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">二进制文件</td>
+</tr>
+</tbody></table>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNh4HS.png"></p>
+<ul>
+<li>后九位每三个隔开分别代表着<font color="#FF7D00">u(所有者)</font>  <font color="#dd7e6b">g(所属组)</font>  <font color="#dda36b">o(其他人)</font>的权限</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">u</td>
+<td align="center">所有者</td>
+</tr>
+<tr>
+<td align="center">g</td>
+<td align="center">所属组</td>
+</tr>
+<tr>
+<td align="center">o</td>
+<td align="center">其他人</td>
+</tr>
+</tbody></table>
+<h1 id="文件命令"><a href="#文件命令" class="headerlink" title="文件命令"></a>文件命令</h1><h2 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h2><ul>
+<li><p>命令名称：<font color='red'><code>ls</code></font></p>
+</li>
+<li><p>命令英文原意：<font color='red'>l</font>i<font color='red'>s</font>t</p>
+</li>
+<li><p>命令所在路径：/bin/ls</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">显示目录文件</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">ls -a [文件或目录]
+ls -l [文件或目录]
+ls -d [文件或目录]</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">英文原意</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-a</td>
+<td align="center">all</td>
+<td align="center">显示所有文件，包括隐藏文件</td>
+</tr>
+<tr>
+<td align="center">-l</td>
+<td align="center">long</td>
+<td align="center">详细信息显示</td>
+</tr>
+<tr>
+<td align="center">-d</td>
+<td align="center">directory</td>
+<td align="center">查看目录属性</td>
+</tr>
+<tr>
+<td align="center">-h</td>
+<td align="center">human</td>
+<td align="center">人性化显示文件大小信息</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="mkdir-命令"><a href="#mkdir-命令" class="headerlink" title="mkdir 命令"></a>mkdir 命令</h2><ul>
+<li><p>命令名称：<font color="red"><code>mkdir</code></font></p>
+</li>
+<li><p>命令英文原意：<font color="red">m</font>a<font color="red">k</font>e <font color="red">dir</font>ectories</p>
+</li>
+<li><p>命令所在目录：/bin/mkdir</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">创建新目录</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">mkdir -p [目录名]</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-p</td>
+<td align="center">递归创建（自动创建父级路径）</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="cd-命令"><a href="#cd-命令" class="headerlink" title="cd 命令"></a>cd 命令</h2><ul>
+<li><p>命令名称：<font color="red">cd</font></p>
+</li>
+<li><p>命令英文原意：<font color="red">c</font>hange <font color="red">d</font>irectory</p>
+</li>
+<li><p>命令所在目录：shell内置命令</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">切换目录</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">cd [目录]</code></pre>
+</li>
+</ul>
+<h2 id="pwd-命令"><a href="#pwd-命令" class="headerlink" title="pwd 命令"></a>pwd 命令</h2><ul>
+<li><p>命令名称：<font color="red">pwd</font></p>
+</li>
+<li><p>命令英文原意：<font color="red">p</font>rint <font color="red">w</font>orking <font color="red">d</font>irectory</p>
+</li>
+<li><p>命令所在目录：/bin/pwd</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">以绝对路径的方式显示当前目录</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">pwd</code></pre>
+</li>
+</ul>
+<h2 id="rmdir-命令"><a href="#rmdir-命令" class="headerlink" title="rmdir 命令"></a>rmdir 命令</h2><ul>
+<li><p>命令名称：<font color="red">rmdir</font></p>
+</li>
+<li><p>命令英文原意：<font color="red">r</font>e<font color="red">m</font>ove empty <font color="red">dir</font>ectory</p>
+</li>
+<li><p>命令所在目录：/bin/rmdir</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">删除空目录</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">rmdir [目录名]</code></pre>
+</li>
+</ul>
+<h2 id="cp-命令"><a href="#cp-命令" class="headerlink" title="cp 命令"></a>cp 命令</h2><ul>
+<li><p>命令名称：<font color="red">cp</font></p>
+</li>
+<li><p>命令英文原意：<font color="red">c</font>o<font color="red">p</font>y</p>
+</li>
+<li><p>命令所在目录：/bin/cp</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">复制文件或目录</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">cp -rp [原文件或目录] [目标目录]</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-r</td>
+<td align="center">复制目录</td>
+</tr>
+<tr>
+<td align="center">-p</td>
+<td align="center">保留文件属性</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="center">显示复制过程</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="mv-命令"><a href="#mv-命令" class="headerlink" title="mv 命令"></a>mv 命令</h2><ul>
+<li><p>命令名称：<font color="red">mv</font></p>
+</li>
+<li><p>命令英文原意：<font color="red">m</font>o<font color="red">v</font>e</p>
+</li>
+<li><p>命令所在目录：/bin/mv</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">剪切文件、改名</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">mv [原文件或目录] [目标目录]</code></pre>
+</li>
+</ul>
+<h2 id="rm-命令"><a href="#rm-命令" class="headerlink" title="rm 命令"></a>rm 命令</h2><ul>
+<li><p>命令名称：<font color="red">rm</font></p>
+</li>
+<li><p>命令英文原意：<font color="red">r</font>e<font color="red">m</font>ove</p>
+</li>
+<li><p>命令所在目录：/bin/rm</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">删除文件</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">rm -rf [文件或目录]</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-r</td>
+<td align="center">删除目录</td>
+</tr>
+<tr>
+<td align="center">-f</td>
+<td align="center">强制执行</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="touch-命令"><a href="#touch-命令" class="headerlink" title="touch 命令"></a>touch 命令</h2><ul>
+<li><p>命令名称：<font color="red">touch</font></p>
+</li>
+<li><p>命令所在目录：/bin/touch</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">创建空文件</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">touch [文件名]</code></pre>
+</li>
+<li><p>创建带空格的文件(<font color="#ff9900">不建议</font>)</p>
+<pre><code class="bash">touch [&quot;文 件 名&quot;]</code></pre>
+<ol>
+<li>加上引号才能创建</li>
+<li>删除麻烦(<font color="#ff9900">必须得加上引号才能操作该文件</font>)</li>
+</ol>
+</li>
+</ul>
+<h2 id="cat-命令"><a href="#cat-命令" class="headerlink" title="cat 命令"></a>cat 命令</h2><ul>
+<li><p>命令名称：<font color="red">cat</font></p>
+</li>
+<li><p>命令所在目录：/bin/cat</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">显示/查看文件内容(喵一眼）</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">cat [文件名]
+cat -n [文件名]</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-n</td>
+<td align="center">查看时显示行号</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="tac-命令"><a href="#tac-命令" class="headerlink" title="tac 命令"></a>tac 命令</h3><ul>
+<li><p>命令名称：<font color="red">tac</font></p>
+</li>
+<li><p>命令所在目录：/usr/bin/tac</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：显示/查看文件内容(<font color="#00ff00">反向(倒着)显示</font>）</p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">tac [文件名]</code></pre>
+</li>
+</ul>
+<h2 id="more-命令（less更好）"><a href="#more-命令（less更好）" class="headerlink" title="more 命令（less更好）"></a>more 命令（less更好）</h2><ul>
+<li><p>命令名称：<font color="red">more</font></p>
+</li>
+<li><p>命令所在目录：/bin/more</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">查看文件并分页显示文件内容</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">more [文件名]</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">操作</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">(空格) / f</td>
+<td align="center">向下翻页</td>
+</tr>
+<tr>
+<td align="center">b</td>
+<td align="center">向上翻页</td>
+</tr>
+<tr>
+<td align="center">Enter</td>
+<td align="center">换行</td>
+</tr>
+<tr>
+<td align="center">q / Q</td>
+<td align="center">退出</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="less-命令"><a href="#less-命令" class="headerlink" title="less 命令"></a>less 命令</h2><ul>
+<li><p>命令名称：<font color="red">less</font></p>
+</li>
+<li><p>命令所在目录：/usr/bin/less</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：查看文件并分页显示文件内容(<font color="#00ff00">可向上翻页</font>)</p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">less [文件名]</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">操作</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">(空格) / f</td>
+<td align="center">翻页</td>
+</tr>
+<tr>
+<td align="center">Enter</td>
+<td align="center">换行</td>
+</tr>
+<tr>
+<td align="center">q / Q</td>
+<td align="center">退出</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p><font color="#00ffff">支持关键词查找</font></p>
+<ul>
+<li>使用less命令进入文件后输入:<font color="#ff9900"><code>/[关键词]</code></font></li>
+<li>查找到后会反白高亮显示</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">操作</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">n</td>
+<td align="center">查找下一个</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="head-命令"><a href="#head-命令" class="headerlink" title="head 命令"></a>head 命令</h2><ul>
+<li><p>命令名称：<font color="red">head</font></p>
+</li>
+<li><p>命令所在目录：/usr/bin/head</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">显示文件前面几行</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">head [文件名]
+head -n 5 [文件名]</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-n</td>
+<td align="center">指定显示几行（未指定行数默认为 10行）</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="tail-命令"><a href="#tail-命令" class="headerlink" title="tail 命令"></a>tail 命令</h2><ul>
+<li><p>命令名称：<font color="red">tail</font></p>
+</li>
+<li><p>命令所在目录：/usr/bin/tail</p>
+</li>
+<li><p>执行权限：所有用户</p>
+</li>
+<li><p>功能描述：<font color="#00ff00">显示文件后面几行</font></p>
+</li>
+<li><p>语法：</p>
+<pre><code class="bash">tail [文件名]</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-n</td>
+<td align="center">指定行数（未指定行数默认为 10行）</td>
+</tr>
+<tr>
+<td align="center">-f</td>
+<td align="center">动态(实时)显示文件末尾内容</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2020 WNAOII
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @WNAOII
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'zh-CN',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

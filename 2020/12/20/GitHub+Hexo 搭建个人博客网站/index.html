@@ -5,9 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hexo || </title>
+    <title>WNAOII || GitHub+Hexo 搭建个人博客网站</title>
     <meta name="author" content="WNAOII">
-    <meta name="description" content=" ">
+    <meta name="description" content="无一分可增不叫完美，无一分可减才是 ">
     <meta name="keywords" content=" ">
     <link rel="icon" href="/https://s3.ax1x.com/2020/12/19/rtugc4.jpg">
     <link rel="stylesheet" href="/css/antd.min.css">
@@ -47,49 +47,35 @@
 <nav id="menu">
     <div class="desktop-menu">
         <a href="/">
-            <span class="title">Hexo</span>
+            <span class="title">WNAOII</span>
         </a>
         
         <a href="/">
             <span>
                 <a-icon type="home" theme="filled" />
             </span>
-            <span>home</span>
+            <span>主页</span>
         </a>
         
-        <a href="/about">
+        <a href="/categories">
             <span>
-                <a-icon type="idcard" theme="filled" />
+                <a-icon type="book" theme="filled" />
             </span>
-            <span>about</span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
         </a>
         
         <a href="/archives">
             <span>
                 <a-icon type="folder" theme="filled" />
             </span>
-            <span>archives</span>
-        </a>
-        
-        <a href="/like/categories">
-            <span>
-                <a-icon type="book" theme="filled" />
-            </span>
-            <span>categories</span>
-        </a>
-        
-        <a href="/like/tags">
-            <span>
-                <a-icon type="tags" theme="filled" />
-            </span>
-            <span>tags</span>
-        </a>
-        
-        <a target="_blank" rel="noopener" href="https://en.korilin.com">
-            <span>
-                <a-icon type="compass" theme="filled" />
-            </span>
-            <span>英文博客</span>
+            <span>归档</span>
         </a>
         
     </div>
@@ -99,7 +85,7 @@
             <span style="margin-right: 10px;">
                 <a-icon type="appstore" theme="filled" />
             </span>
-            <span>Hexo</span>
+            <span>WNAOII</span>
         </div>
         <div class="items" v-show="menu_show">
             
@@ -108,16 +94,25 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="home" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
                 </div>
             </a>
             
-            <a href="/about">
+            <a href="/categories">
                 <div class="item">
                     <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="idcard" theme="filled" />
+                        <a-icon type="book" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
                 </div>
             </a>
             
@@ -126,34 +121,7 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="folder" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
-                </div>
-            </a>
-            
-            <a href="/like/categories">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="book" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
-                </div>
-            </a>
-            
-            <a href="/like/tags">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="tags" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
-                </div>
-            </a>
-            
-            <a target="_blank" rel="noopener" href="https://en.korilin.com">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="compass" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">英文博客</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
                 </div>
             </a>
             
@@ -169,23 +137,47 @@
 <link rel="stylesheet" href="/css/post-body.css">
 <div class="article">
     <div>
-        <h1> </h1>
+        <h1>GitHub+Hexo 搭建个人博客网站 </h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <a-icon type="calendar" theme="filled" />
             </span>
-            2020/12/19
+            2020/12/20
         </span>
 
         
+        <span class="category">
+            <a href="/categories/学习">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                学习
+            </a>
+        </span>
+        
 
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Hexo" style=color:#016a99>
+                    Hexo
+                </a>
+            </span>
+            
+        </span>
         
     </div>
 
     <div class="content" v-pre>
-        <h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。</p>
+        <h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。</p>
 <p>Hexo 使用 <a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，</p>
 <p>即可利用靓丽的主题生成静态网页。</p>
 <a id="more"></a>
@@ -193,7 +185,7 @@
 <h1 id="准备事项"><a href="#准备事项" class="headerlink" title="准备事项"></a>准备事项</h1><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><ul>
 <li><p> <a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js下载地址</a></p>
 </li>
-<li><p>测试是否安装成功<code>node -v</code>显示版本号即成功</p>
+<li><p> 测试是否安装成功<code>node -v</code>显示版本号即成功</p>
 </li>
 <li><p>npm包管理器</p>
 <ul>
@@ -326,7 +318,7 @@ hexo server        #开启本地服务器</code></pre>
 <footer id="footer">
     <div class="footer-wrap">
         <div>
-            © 2018 - 2020 Hexo
+            © 2018 - 2020 WNAOII
             <span class="footer-icon">
                 <a-icon type="flag" theme="filled" /></span>
             @WNAOII
