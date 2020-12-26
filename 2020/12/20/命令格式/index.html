@@ -1,188 +1,249 @@
 
+
 <!DOCTYPE html>
-<html lang="zh-CN ">
+<html lang="zh-CN" data-default-color-scheme=&#34;dark&#34;>
+
+
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WNAOII || 命令格式</title>
-    <meta name="author" content="WNAOII">
-    <meta name="description" content="无一分可增不叫完美，无一分可减才是 ">
-    <meta name="keywords" content=" ">
-    <link rel="icon" href="/https://s3.ax1x.com/2020/12/19/rtugc4.jpg">
-    <link rel="stylesheet" href="/css/antd.min.css">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="无一分可增不叫完美，无一分可减才是">
+  <meta name="author" content="WNAOII">
+  <meta name="keywords" content="">
+  <title>命令格式 - WNAOII</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
     
-    <link rel="stylesheet" href="/css/full-theme.css">
     
-    <script src="/js/vue.js"></script>
-    <script src="/js/antd.min.js"></script>
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"wnaoii.github.io","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"I","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 5.3.0"></head>
 
+
 <body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>WNAOII·Blog</strong>&nbsp;</a>
 
-    <div id="loading"
-        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
-        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
-        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
-        <div
-            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
-            <div id="loadcontent"
-                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
-                <div>
-                    <h2>LOADING...</h2>
-                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
-                    <div>
-                        <img src="/dancingkitty.gif" alt="loading">
-                    </div>
-                </div>
-            </div>
-        </div>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
-
-    <div id="layout">
-        <transition name="into">
-            <div v-show="show_page" style="display: none;">
-                <div id="menu_show">
-                     
-<nav id="menu">
-    <div class="desktop-menu">
-        <a href="/">
-            <span class="title">WNAOII</span>
-        </a>
-        
-        <a href="/">
-            <span>
-                <a-icon type="home" theme="filled" />
-            </span>
-            <span>主页</span>
-        </a>
-        
-        <a href="/categories">
-            <span>
-                <a-icon type="book" theme="filled" />
-            </span>
-            <span>分类</span>
-        </a>
-        
-        <a href="/tags">
-            <span>
-                <a-icon type="tags" theme="filled" />
-            </span>
-            <span>标签</span>
-        </a>
-        
-        <a href="/archives">
-            <span>
-                <a-icon type="folder" theme="filled" />
-            </span>
-            <span>归档</span>
-        </a>
-        
-    </div>
-
-    <div :class="'phone-menu ' + menu_show" id="phone-menu">
-        <div :class="'title'" @click="menu_show=!menu_show">
-            <span style="margin-right: 10px;">
-                <a-icon type="appstore" theme="filled" />
-            </span>
-            <span>WNAOII</span>
-        </div>
-        <div class="items" v-show="menu_show">
-            
-            <a href="/">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="home" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
-                </div>
-            </a>
-            
-            <a href="/categories">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="book" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
-                </div>
-            </a>
-            
-            <a href="/tags">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="tags" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
-                </div>
-            </a>
-            
-            <a href="/archives">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="folder" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
-                </div>
-            </a>
-            
-        </div>
-        <div class="curtain" v-show="menu_show"></div>
-    </div>
-
+  </div>
 </nav>
-                </div>
 
-                <div id="main">
-                     
-<link rel="stylesheet" href="/css/post-body.css">
-<div class="article">
-    <div>
-        <h1>命令格式 </h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="命令格式">
+              
             </span>
-            2020/12/20
-        </span>
 
-        
-        <span class="category">
-            <a href="/categories/Linux">
-                <span class="icon">
-                    <a-icon type="book" theme="filled" />
-                </span>
-                Linux
-            </a>
-        </span>
-        
-
-        
-
-        <span class="tags">
-            <span class="icon">
-                <a-icon type="tags" theme="filled" />
-            </span>
             
-            <span class="tag">
-                
-                <a href="/tags/Linux" style=color:#03a9f4>
-                    Linux
-                </a>
-            </span>
-            
-        </span>
-        
-    </div>
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-12-20 22:58" pubdate>
+        2020年12月20日 晚上
+      </time>
+    </span>
+  
+</div>
 
-    <div class="content" v-pre>
-        <p>linux命令是对Linux系统进行管理的命令。对于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Linux%E7%B3%BB%E7%BB%9F/1732935">Linux系统</a>来说，无论是中央处理器、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98/103614">内存</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E9%A9%B1%E5%8A%A8%E5%99%A8/5900722">磁盘驱动器</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%94%AE%E7%9B%98/208749">键盘</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%BC%A0%E6%A0%87/122323">鼠标</a>，还是用户等都是文件，Linux系统管理的命令是它正常运行的核心，与之前的DOS命令类似。</p>
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">命令格式</h1>
+            
+            <div class="markdown-body">
+              <p>linux命令是对Linux系统进行管理的命令。对于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Linux%E7%B3%BB%E7%BB%9F/1732935">Linux系统</a>来说，无论是中央处理器、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98/103614">内存</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E9%A9%B1%E5%8A%A8%E5%99%A8/5900722">磁盘驱动器</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%94%AE%E7%9B%98/208749">键盘</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%BC%A0%E6%A0%87/122323">鼠标</a>，还是用户等都是文件，Linux系统管理的命令是它正常运行的核心，与之前的DOS命令类似。</p>
 <a id="more"></a>
 
 <p>命令格式：</p>
-<pre><code class="bash">命令 [-选项] [参数]
-例： ls -la /etc</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">命令 [-选项] [参数]<br>例： ls -la /etc<br></code></pre></div></td></tr></table></figure>
 <p>说明： </p>
 <ol>
 <li><p>个别命令使用不遵循此格式</p>
@@ -191,44 +252,44 @@
 </li>
 <li><p>可以写成简化选项与完整选项</p>
 <p>简化：</p>
-<pre><code class="bash">-a</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">-a<br></code></pre></div></td></tr></table></figure>
 <p>完整：</p>
-<pre><code class="bash">--all</code></pre>
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">--all<br></code></pre></div></td></tr></table></figure>
+<h1 id="文件目录介绍"><a href="#文件目录介绍" class="headerlink" title="文件目录介绍"></a>文件目录介绍</h1></li>
 </ol>
-<h1 id="文件目录介绍"><a href="#文件目录介绍" class="headerlink" title="文件目录介绍"></a>文件目录介绍</h1><p>1.</p>
-<p><img src="https://s3.ax1x.com/2020/12/19/rNcpQO.png"></p>
+<p>1.</p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNcpQO.png" srcset="/img/loading.gif"></p>
 <ul>
 <li>引用计数，代表曾经被应用过</li>
 <li>展示不记不重要，仅了解</li>
 </ul>
 <p>2.</p>
-<p><img src="https://s3.ax1x.com/2020/12/19/rNcVYt.png"></p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNcVYt.png" srcset="/img/loading.gif"></p>
 <ul>
 <li>代表所有者</li>
 </ul>
 <p>3.</p>
-<p><img src="https://s3.ax1x.com/2020/12/19/rNcyfx.png"></p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNcyfx.png" srcset="/img/loading.gif"></p>
 <ul>
 <li>代表所属组</li>
 </ul>
 <p>4.</p>
-<p><img src="https://s3.ax1x.com/2020/12/19/rNcRXD.png"></p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNcRXD.png" srcset="/img/loading.gif"></p>
 <ul>
 <li>代表文件的大小</li>
 </ul>
 <p>5.</p>
-<p><img src="https://s3.ax1x.com/2020/12/19/rNcTht.png"></p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNcTht.png" srcset="/img/loading.gif"></p>
 <ul>
 <li>代表文件最后的改动时间</li>
 </ul>
 <p>6.</p>
-<p><img src="https://s3.ax1x.com/2020/12/19/rN2Sqe.png"></p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rN2Sqe.png" srcset="/img/loading.gif"></p>
 <ul>
 <li>代表文件名</li>
 </ul>
 <p>开头段释意：</p>
-<p><img src="https://s3.ax1x.com/2020/12/19/rNhwnK.png"></p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNhwnK.png" srcset="/img/loading.gif"></p>
 <ul>
 <li>第一位代表文件类型</li>
 </ul>
@@ -252,7 +313,7 @@
 <td align="center">二进制文件</td>
 </tr>
 </tbody></table>
-<p><img src="https://s3.ax1x.com/2020/12/19/rNh4HS.png"></p>
+<p><img src="https://s3.ax1x.com/2020/12/19/rNh4HS.png" srcset="/img/loading.gif"></p>
 <ul>
 <li>后九位每三个隔开分别代表着<font color="#FF7D00">u(所有者)</font>  <font color="#dd7e6b">g(所属组)</font>  <font color="#dda36b">o(其他人)</font>的权限</li>
 </ul>
@@ -288,9 +349,7 @@
 <li><p>功能描述：<font color="#00ff00">显示目录文件</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">ls -a [文件或目录]
-ls -l [文件或目录]
-ls -d [文件或目录]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">ls -a [文件或目录]<br>ls -l [文件或目录]<br>ls -d [文件或目录]<br></code></pre></div></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -334,7 +393,7 @@ ls -d [文件或目录]</code></pre>
 <li><p>功能描述：<font color="#00ff00">创建新目录</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">mkdir -p [目录名]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">mkdir -p [目录名]<br></code></pre></div></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -361,7 +420,9 @@ ls -d [文件或目录]</code></pre>
 <li><p>功能描述：<font color="#00ff00">切换目录</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">cd [目录]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> [目录]<br></code></pre></div></td></tr></table></figure>
+
+
 </li>
 </ul>
 <h2 id="pwd-命令"><a href="#pwd-命令" class="headerlink" title="pwd 命令"></a>pwd 命令</h2><ul>
@@ -376,7 +437,9 @@ ls -d [文件或目录]</code></pre>
 <li><p>功能描述：<font color="#00ff00">以绝对路径的方式显示当前目录</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">pwd</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">pwd</span><br></code></pre></div></td></tr></table></figure>
+
+
 </li>
 </ul>
 <h2 id="rmdir-命令"><a href="#rmdir-命令" class="headerlink" title="rmdir 命令"></a>rmdir 命令</h2><ul>
@@ -391,7 +454,9 @@ ls -d [文件或目录]</code></pre>
 <li><p>功能描述：<font color="#00ff00">删除空目录</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">rmdir [目录名]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">rmdir [目录名]<br></code></pre></div></td></tr></table></figure>
+
+
 </li>
 </ul>
 <h2 id="cp-命令"><a href="#cp-命令" class="headerlink" title="cp 命令"></a>cp 命令</h2><ul>
@@ -406,7 +471,7 @@ ls -d [文件或目录]</code></pre>
 <li><p>功能描述：<font color="#00ff00">复制文件或目录</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">cp -rp [原文件或目录] [目标目录]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">cp -rp [原文件或目录] [目标目录]<br></code></pre></div></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -441,7 +506,9 @@ ls -d [文件或目录]</code></pre>
 <li><p>功能描述：<font color="#00ff00">剪切文件、改名</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">mv [原文件或目录] [目标目录]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">mv [原文件或目录] [目标目录]<br></code></pre></div></td></tr></table></figure>
+
+
 </li>
 </ul>
 <h2 id="rm-命令"><a href="#rm-命令" class="headerlink" title="rm 命令"></a>rm 命令</h2><ul>
@@ -456,7 +523,7 @@ ls -d [文件或目录]</code></pre>
 <li><p>功能描述：<font color="#00ff00">删除文件</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">rm -rf [文件或目录]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">rm -rf [文件或目录]<br></code></pre></div></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -485,10 +552,9 @@ ls -d [文件或目录]</code></pre>
 <li><p>功能描述：<font color="#00ff00">创建空文件</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">touch [文件名]</code></pre>
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">touch [文件名]<br></code></pre></div></td></tr></table></figure></li>
 <li><p>创建带空格的文件(<font color="#ff9900">不建议</font>)</p>
-<pre><code class="bash">touch [&quot;文 件 名&quot;]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">touch [<span class="hljs-string">&quot;文 件 名&quot;</span>]<br></code></pre></div></td></tr></table></figure>
 <ol>
 <li>加上引号才能创建</li>
 <li>删除麻烦(<font color="#ff9900">必须得加上引号才能操作该文件</font>)</li>
@@ -505,8 +571,7 @@ ls -d [文件或目录]</code></pre>
 <li><p>功能描述：<font color="#00ff00">显示/查看文件内容(喵一眼）</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">cat [文件名]
-cat -n [文件名]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">cat [文件名]<br>cat -n [文件名]<br></code></pre></div></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -531,7 +596,9 @@ cat -n [文件名]</code></pre>
 <li><p>功能描述：显示/查看文件内容(<font color="#00ff00">反向(倒着)显示</font>）</p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">tac [文件名]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">tac [文件名]<br></code></pre></div></td></tr></table></figure>
+
+
 </li>
 </ul>
 <h2 id="more-命令（less更好）"><a href="#more-命令（less更好）" class="headerlink" title="more 命令（less更好）"></a>more 命令（less更好）</h2><ul>
@@ -544,7 +611,7 @@ cat -n [文件名]</code></pre>
 <li><p>功能描述：<font color="#00ff00">查看文件并分页显示文件内容</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">more [文件名]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">more [文件名]<br></code></pre></div></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -581,7 +648,7 @@ cat -n [文件名]</code></pre>
 <li><p>功能描述：查看文件并分页显示文件内容(<font color="#00ff00">可向上翻页</font>)</p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">less [文件名]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">less [文件名]<br></code></pre></div></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -634,8 +701,7 @@ cat -n [文件名]</code></pre>
 <li><p>功能描述：<font color="#00ff00">显示文件前面几行</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">head [文件名]
-head -n 5 [文件名]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">head [文件名]<br>head -n 5 [文件名]<br></code></pre></div></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -660,7 +726,7 @@ head -n 5 [文件名]</code></pre>
 <li><p>功能描述：<font color="#00ff00">显示文件后面几行</font></p>
 </li>
 <li><p>语法：</p>
-<pre><code class="bash">tail [文件名]</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">tail [文件名]<br></code></pre></div></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -680,95 +746,217 @@ head -n 5 [文件名]</code></pre>
 </li>
 </ul>
 
-    </div>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Linux/">Linux</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/12/22/Hexo/HEXO%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">HEXO 主要目录</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/12/20/Hexo/GitHub+Hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">
+                        <span class="hidden-mobile">GitHub+Hexo 搭建个人博客网站</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
 
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <div id="comment">
-        <div id="gitalk-container">
+            
+          </article>
         </div>
+      </div>
     </div>
     
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
 </div>
-                     
-<footer id="footer">
-    <div class="footer-wrap">
-        <div>
-            © 2018 - 2020 WNAOII
-            <span class="footer-icon">
-                <a-icon type="flag" theme="filled" /></span>
-            @WNAOII
-        </div>
-        <div></div>
-        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
-                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
-        
-    </div>
 
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
 </footer>
 
-<script src="/js/highlight.min.js"></script>
-<script src="/js/particle.js"></script>
-                </div>
-            </div>
-        </transition>
-    </div>
+<!-- SCRIPTS -->
 
-    <script>
-    new Vue({
-        el: "#layout",
-        data: {
-            show_page: false,
-            onload_menu: false,
-            menu_show: false,
-            card_top: 100
-        },
-        created: function () {
-            var that = this
-            window.onload = function () {
-                that.show_page = true
-                document.getElementById("loadcontent").style.opacity = 0
-                setTimeout(function () {
-                    document.getElementById("loadleft").style.width = 0
-                    document.getElementById("loadright").style.width = 0
-                }, 300)
-                setTimeout(function () {
-                    document.getElementById("loading").style = "display:none"
-                }, 600)
-            }
-        },
-        mounted: function () {
-            var that = this
-            window.addEventListener('scroll', function (e) {
-                that.menu_show = false
-            })
-        },
-        methods: {
-            home_click: function () {
-                window.scrollTo({
-                    top: window.innerHeight - 80,
-                    behavior: "smooth",
-                });
-            }
-        }
-    })
-</script>
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
 
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script>
-    const gitalk = new Gitalk({
-        clientID: '',
-        clientSecret: '',
-        repo: 'hexo-theme-particle',      // The repository of store comments,
-        owner: 'korilin',
-        admin: ['korilin'],
-        language: 'zh-CN',
-        id: location.pathname,      // Ensure uniqueness and length less than 50
-        distractionFreeMode: true  // Facebook-like distraction free mode
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
     })
-    gitalk.render('gitalk-container')
-</script>
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
 
 </body>
-
 </html>
