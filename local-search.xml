@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>HEXO 主要目录</title>
+    <link href="/2020/12/22/Hexo/HEXO%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/"/>
+    <url>/2020/12/22/Hexo/HEXO%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/</url>
+    
+    <content type="html"><![CDATA[<h1 id="文件夹"><a href="#文件夹" class="headerlink" title="文件夹"></a>文件夹</h1><p>123sdsd</p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">blog<br>- node_modules         <span class="hljs-comment"># NodeJs 的依赖包，可根据所需添加插件</span><br>- scaffolds<span class="hljs-comment"># Hexo 创建md文件的创建模板</span><br>- <span class="hljs-built_in">source</span>    <span class="hljs-comment"># md 文件目录（博客markdown文件丢这）</span><br>- themes    <span class="hljs-comment"># 主题文件夹</span><br>- _config.yml <span class="hljs-comment"># 配置文件</span><br>- package.json <span class="hljs-comment"># 自定义的 NodeJs 包</span><br>- package-lock.json  <span class="hljs-comment"># 支持 hexo 运行的 NodeJs 包</span><br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>命令格式</title>
     <link href="/2020/12/20/%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F/"/>
     <url>/2020/12/20/%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F/</url>
