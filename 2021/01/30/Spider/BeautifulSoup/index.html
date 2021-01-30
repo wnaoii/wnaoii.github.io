@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      844 字
+      1.2k 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      16
        分钟
     </span>
   
@@ -362,6 +362,8 @@
 <p>只展示一种方法其他的网上找</p>
 <p>查找的进准度不如搜索来得实在</p>
 </blockquote>
+<hr>
+<h2 id="过程备份："><a href="#过程备份：" class="headerlink" title="过程备份："></a>过程备份：</h2><figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><br><span class="hljs-comment"># BeautifulSoup将复杂的HTML文档转换成一个复杂的树形结构，</span><br><span class="hljs-comment"># 每个节点都是python对象，对所有对象可以归纳为4种：</span><br><span class="hljs-comment"># - Tag</span><br><span class="hljs-comment"># - NavigableString</span><br><span class="hljs-comment"># - BeautifulSoup</span><br><span class="hljs-comment"># - Comment</span><br><br><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup<br><span class="hljs-keyword">import</span> re<br><br><br>file = <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;F:/编辑区/douban/test/baidu.html&quot;</span>,<span class="hljs-string">&quot;rb&quot;</span>)  <span class="hljs-comment">#模拟爬取到的文件读取并打开</span><br>html = file.read()  <span class="hljs-comment">#读取到一个对象中</span><br>bs = BeautifulSoup(html,<span class="hljs-string">&quot;html.parser&quot;</span>)  <span class="hljs-comment">#使用“html.parser”解析器解析一个之前定义的html对象</span><br><br><span class="hljs-comment">#编译一个正则表达式对象，通过find_all()方法查找符合的对象</span><br><span class="hljs-comment"># t_list = bs.find_all(re.compile(&quot;a&quot;))</span><br><span class="hljs-comment"># print(t_list)</span><br><br><span class="hljs-comment">#方法(函数)方式搜索</span><br><span class="hljs-comment"># def name_is_exists(tag):</span><br><span class="hljs-comment">#     return tag.has_attr(&quot;name&quot;)</span><br><br><span class="hljs-comment"># t_list = bs.find_all(name_is_exists)</span><br><span class="hljs-comment"># # print(t_list)</span><br><span class="hljs-comment"># for item in t_list:</span><br><span class="hljs-comment">#     print(item)</span><br><br><span class="hljs-comment">#传参查找</span><br><span class="hljs-comment"># t_list = bs.find_all(id=&quot;head&quot;)</span><br><span class="hljs-comment"># print(t_list)</span><br><br><span class="hljs-comment"># t_list = bs.find_all(class_=True)</span><br><span class="hljs-comment"># for i in t_list:</span><br><span class="hljs-comment">#     print(i)</span><br><br><span class="hljs-comment"># t_list = bs.find_all(href=&quot;http://tieba.baidu.com&quot;)</span><br><span class="hljs-comment"># for i in t_list:</span><br><span class="hljs-comment">#     print(i)</span><br><br><span class="hljs-comment">#text参数</span><br><span class="hljs-comment"># t_list = bs.find_all(text=&quot;hao123&quot;)</span><br><span class="hljs-comment"># t_list = bs.find_all(text=[&quot;hao123&quot;,&quot;地图&quot;,&quot;贴吧&quot;,&quot;视频&quot;])</span><br><span class="hljs-comment"># t_list = bs.find_all(text = re.compile(&quot;\d&quot;))</span><br><span class="hljs-comment"># t_list = bs.find_all(&#x27;a&#x27;,limit=3)</span><br><span class="hljs-comment"># for i in t_list:</span><br><span class="hljs-comment">#     print(i)</span><br><br><span class="hljs-comment">#CSS选择器</span><br><span class="hljs-comment"># t_list = bs.select(&#x27;title&#x27;)	#通过标签来查找</span><br><span class="hljs-comment"># t_list = bs.select(&#x27;.mnav&#x27;)	#通过类名来查找</span><br><span class="hljs-comment"># t_list = bs.select(&#x27;#u1&#x27;)	    #通过ID来查找</span><br><span class="hljs-comment"># t_list = bs.select(&#x27;a[class=&quot;bri&quot;]&#x27;)	#通过属性来查找</span><br>t_list = bs.select(<span class="hljs-string">&#x27;head &gt; title&#x27;</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> t_list:<br>    print(i)<br></code></pre></div></td></tr></table></figure>
 
             </div>
             <hr>
@@ -392,7 +394,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/01/30/%E5%85%B3%E4%BA%8E%E5%AF%BC%E5%85%A5urllib%E5%8C%85%E7%9A%84%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98/">
+                      <a href="/2021/01/30/Spider/%E5%85%B3%E4%BA%8E%E5%AF%BC%E5%85%A5urllib%E5%8C%85%E7%9A%84%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98/">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">导入了urllib包调用“request”报错</span>
                         <span class="visible-mobile">上一篇</span>
