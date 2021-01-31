@@ -193,6 +193,85 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2021/01/31/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/31/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+          
+          
+            
+          
+          正则表达式
+
+
+操作符
+说明
+实例
+
+
+
+.
+表示任何单个字符
+
+
+
+[ ]
+字符集，对单个字符给出取值范围
+[abc] 表示a、b、c，[a - z]表示a到z单个字符
+
+
+[ ^ ]
+非字符集，对单个字符给出出排除范围
+[^abc] 表示非a或b或c的单个字符
+
+
+*
+前一个字符0次或无限次扩展
+abc* 表示 ab、abc、abcc、abccc等
+
+
++
+前一个字符1次或无限次扩展
+abc+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-31 17:20" pubdate>
+              2021-01-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/search/">search</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/01/30/Spider/%E5%85%B3%E4%BA%8E%E5%AF%BC%E5%85%A5urllib%E5%8C%85%E7%9A%84%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98/">导入了urllib包调用“request”报错</a>
       </h1>
 
@@ -380,57 +459,19 @@ AttributeError: module ‘urllib’ has no attribute ‘request’
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/12/20/Hexo/GitHub+Hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">GitHub+Hexo 搭建个人博客网站</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/12/20/Hexo/GitHub+Hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">
-          
-          
-            
-          
-          什么是 Hexo？Hexo 是一个快速、简洁且高效的博客框架。
-Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，
-即可利用靓丽的主题生成静态网页。
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-20 22:40" pubdate>
-              2020-12-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Hexo/">Hexo</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Hexo/">Hexo</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
 
 
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
 
 
 
